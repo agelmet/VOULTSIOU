@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Αννα Βουλτσιου | Γνωσιακη Συμπεριφορικη Θεραπεια (CBT)</title>
-    <link rel="icon" type="image/jpeg" href="https://github.com/agelmet/VOULTSIOU/blob/main/front.jpg?raw=true">
+    <title>Άννα Βούλτσιου | Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</title>
+    <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ===== CSS VARIABLES ===== */
@@ -84,7 +84,7 @@
         .loader-logo {
             width: 90px;
             height: 90px;
-            border-radius: 50%;
+            border-radius: 20px;
             object-fit: cover;
             border: 2px solid rgba(255,255,255,0.2);
             animation: loaderPulse 1.5s ease-in-out infinite;
@@ -146,16 +146,17 @@
         .nav-logo-img {
             width: 56px;
             height: 56px;
-            border-radius: 50%;
+            border-radius: 14px;
             object-fit: cover;
             border: 2px solid rgba(255,255,255,0.3);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.4s var(--transition-smooth);
         }
         .nav.scrolled .nav-logo-img {
             width: 46px;
             height: 46px;
             border-color: var(--sage-light);
+            border-radius: 12px;
         }
         .nav-logo-text {
             font-family: var(--font-display);
@@ -737,7 +738,9 @@
             box-shadow: var(--shadow-soft);
         }
         .about-credential-icon {
-            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            color: var(--sage-mid);
         }
         .about-credential-text {
             font-size: 0.78rem;
@@ -889,9 +892,9 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
         .pillar-icon {
-            font-size: 2.2rem;
+            display: inline-block;
+            color: var(--sage-light);
             margin-bottom: 20px;
-            display: block;
         }
         .pillar-title {
             font-family: var(--font-display);
@@ -1007,7 +1010,7 @@
         .space-gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             background: var(--cream-warm);
             display: block;
             transition: transform 0.7s var(--transition-smooth);
@@ -1289,13 +1292,6 @@
             gap: 14px;
             margin-bottom: 20px;
         }
-        .footer-brand-logo img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
         .footer-brand-logo span {
             font-family: var(--font-display);
             font-size: 1.2rem;
@@ -1464,36 +1460,19 @@
             .nav { padding: 12px 20px; }
             .nav.scrolled { padding: 8px 20px; }
         }
-
-        /* Extra image section */
-        .about-extra-img {
-            position: relative;
-            margin-top: 60px;
-            border-radius: 24px;
-            overflow: hidden;
-            max-width: 700px;
-        }
-        .about-extra-img img {
-            width: 100%;
-            display: block;
-            border-radius: 24px;
-            box-shadow: var(--shadow-medium);
-        }
     </style>
 </head>
 <body>
 
-    <!-- PAGE LOADER -->
     <div class="page-loader" id="pageLoader">
-        <img src="https://github.com/agelmet/VOULTSIOU/blob/main/front.jpg?raw=true" alt="" class="loader-logo">
+        <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="" class="loader-logo">
         <div class="loader-line"></div>
     </div>
 
-    <!-- NAVIGATION -->
     <nav class="nav" id="mainNav">
         <a href="#hero" class="nav-logo">
-            <img src="https://github.com/agelmet/VOULTSIOU/blob/main/front.jpg?raw=true" alt="Logo" class="nav-logo-img">
-            <span class="nav-logo-text">Αννα Βουλτσιου</span>
+            <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Άννα Βούλτσιου</span>
         </a>
         <ul class="nav-links">
             <li><a href="#about">Η Ψυχολογος</a></li>
@@ -1501,27 +1480,25 @@
             <li><a href="#pillars">Εγγυηση</a></li>
             <li><a href="#space">Ο Χωρος</a></li>
             <li><a href="#reviews">Εμπειριες</a></li>
-            <li><a href="#contact" class="nav-cta">Κλειστε Ραντεβου</a></li>
+            <li><a href="#contact" class="nav-cta">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a></li>
         </ul>
         <div class="nav-hamburger" id="navHamburger" onclick="toggleMobile()">
             <span></span><span></span><span></span>
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" onclick="closeMobile()">Η Ψυχολογος</a>
-        <a href="#services" onclick="closeMobile()">Υπηρεσιες</a>
-        <a href="#pillars" onclick="closeMobile()">Εγγυηση</a>
-        <a href="#space" onclick="closeMobile()">Ο Χωρος</a>
-        <a href="#reviews" onclick="closeMobile()">Εμπειριες</a>
-        <a href="#contact" onclick="closeMobile()">Κλειστε Ραντεβου</a>
+        <a href="#about" onclick="closeMobile()">Η Ψυχολόγος</a>
+        <a href="#services" onclick="closeMobile()">Υπηρεσίες</a>
+        <a href="#pillars" onclick="closeMobile()">Εγγύηση</a>
+        <a href="#space" onclick="closeMobile()">Ο Χώρος</a>
+        <a href="#reviews" onclick="closeMobile()">Εμπειρίες</a>
+        <a href="#contact" onclick="closeMobile()">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
     </div>
 
-    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0823.jpg?raw=true" alt="Χωρος θεραπειας">
+            <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0823.jpg" alt="Χώρος θεραπείας">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-grain"></div>
@@ -1531,14 +1508,14 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <div class="hero-badge-dot"></div>
-                    <span>Γνωσιακη Συμπεριφορικη Θεραπεια</span>
+                    <span>Γνωσιακή Συμπεριφορική Θεραπεία</span>
                 </div>
                 <h1 class="hero-title">
-                    Πρακτικα βηματα<br>για <em>ουσιαστικη αλλαγη.</em>
+                    Πρακτικά βήματα<br>για <em>ουσιαστική αλλαγή.</em>
                 </h1>
                 <p class="hero-subtitle">Cognitive Behavioural Therapy (CBT)</p>
                 <p class="hero-desc">
-                    Ενας ασφαλης χωρος στη Νεα Ιωνια, οπου η επιστημονικα τεκμηριωμενη θεραπεια συναντα τη γνησια ανθρωπινη κατανοηση. Μαθετε να αναγνωριζετε τις σκεψεις που σας περιοριζουν και να χτιζετε μια καθημερινοτητα με νοημα.
+                    Ένας ασφαλής χώρος στη Νέα Ιωνία, όπου η επιστημονικά τεκμηριωμένη θεραπεία συναντά τη γνήσια ανθρώπινη κατανόηση. Μάθετε να αναγνωρίζετε τις σκέψεις που σας περιορίζουν και να χτίζετε μια καθημερινότητα με νόημα.
                 </p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn-primary">
@@ -1552,248 +1529,248 @@
             <div class="hero-portrait">
                 <div class="hero-portrait-frame">
                     <div class="hero-portrait-glow"></div>
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0864.jpg?raw=true" alt="Αννα Βουλτσιου" class="hero-portrait-img">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0864.jpg" alt="Άννα Βούλτσιου" class="hero-portrait-img">
                     <div class="hero-portrait-accent">
-                        <div class="hero-portrait-accent-label">Αρ. Αδειας</div>
+                        <div class="hero-portrait-accent-label">Αρ. Άδειας</div>
                         <div class="hero-portrait-accent-value">ΑΠ 13535</div>
-                        <div class="hero-portrait-accent-sub">Αδειουχος Ψυχολογος</div>
+                        <div class="hero-portrait-accent-sub">Αδειούχος Ψυχολόγος</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="hero-scroll">
-            <span>Ανακαλυψτε</span>
+            <span>Ανακαλύψτε</span>
             <div class="hero-scroll-line"></div>
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-wrapper reveal">
                     <div class="about-image-decoration"></div>
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0859.jpg?raw=true" alt="Αννα Βουλτσιου" class="about-image">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0859.jpg" alt="Άννα Βούλτσιου" class="about-image">
                 </div>
                 <div class="about-content">
-                    <div class="section-label reveal">Η Ψυχολογος</div>
+                    <div class="section-label reveal">Η Ψυχολόγος</div>
                     <h2 class="section-title reveal reveal-delay-1">
-                        Αννα <em>Βουλτσιου</em>
+                        Άννα <em>Βούλτσιου</em>
                     </h2>
                     <p class="about-text reveal reveal-delay-2">
-                        Η Αννα Βουλτσιου ειναι αδειουχος Ψυχολογος (Αρ. Αδειας: ΑΠ 13535) και διατηρει το ιδιωτικο της γραφειο στη Νεα Ιωνια. Ειναι κατοχος πτυχιου Ψυχολογιας (BSc Psychology) απο το βρετανικο University of East London. Προκειμενου να προσφερει αμεσες και επιστημονικα τεκμηριωμενες λυσεις, εξειδικευτηκε στη Γνωσιακη – Συμπεριφορικη Ψυχοθεραπεια (C.B.T.) στο Κεντρο Εφαρμοσμενης Ψυχοθεραπειας και Συμβουλευτικης.
+                        Η Άννα Βούλτσιου είναι αδειούχος Ψυχολόγος (Αρ. Άδειας: ΑΠ 13535) και διατηρεί το ιδιωτικό της γραφείο στη Νέα Ιωνία. Είναι κάτοχος πτυχίου Ψυχολογίας (BSc Psychology) από το βρετανικό University of East London. Προκειμένου να προσφέρει άμεσες και επιστημονικά τεκμηριωμένες λύσεις, εξειδικεύτηκε στη Γνωσιακή – Συμπεριφορική Ψυχοθεραπεία (C.B.T.) στο Κέντρο Εφαρμοσμένης Ψυχοθεραπείας και Συμβουλευτικής.
                     </p>
                     <p class="about-text reveal reveal-delay-2">
-                        Η κλινικη της εμπειρια ειναι ευρεια και διακρινεται για την ενσυναισθηση και την προσαρμοστικοτητα της. Εχει εργαστει πρακτικα στο Κεντρο Ειδικης Εκπαιδευσης Παιδιων με Ειδικες Αναγκες (Κ.Ε.Ε.Π.Ε.Α.) «Οριζοντες», αποκτωντας πολυτιμη εμπειρια στη διαχειριση ευαισθητων πληθυσμων. Παραλληλα, ολοκληρωσε 120 ωρες εποπτευομενης κλινικης ασκησης στο «Νεστωρ - Κεντρο Μνημης», εφαρμοζοντας τις τεχνικες της CBT σε πραγματικες, απαιτητικες κλινικες συνθηκες.
+                        Η κλινική της εμπειρία είναι ευρεία και διακρίνεται για την ενσυναίσθηση και την προσαρμοστικότητά της. Έχει εργαστεί πρακτικά στο Κέντρο Ειδικής Εκπαίδευσης Παιδιών με Ειδικές Ανάγκες (Κ.Ε.Ε.Π.Ε.Α.) «Ορίζοντες», αποκτώντας πολύτιμη εμπειρία στη διαχείριση ευαίσθητων πληθυσμών. Παράλληλα, ολοκλήρωσε 120 ώρες εποπτευόμενης κλινικής άσκησης στο «Νέστωρ - Κέντρο Μνήμης», εφαρμόζοντας τις τεχνικές της CBT σε πραγματικές, απαιτητικές κλινικές συνθήκες.
                     </p>
                     <div class="about-quote reveal reveal-delay-3">
-                        Στοχος μου ειναι να σας εφοδιασω με τα καταλληλα πρακτικα εργαλεια ωστε να αναγνωριζετε τις αρνητικες σκεψεις, να διαχειριζεστε το αγχος, και να χτισετε μια καθημερινοτητα βασισμενη στη λειτουργικοτητα και την υγιη αυτοεκτιμηση.
+                        Στόχος μου είναι να σας εφοδιάσω με τα κατάλληλα πρακτικά εργαλεία ώστε να αναγνωρίζετε τις αρνητικές σκέψεις, να διαχειρίζεστε το άγχος, και να χτίσετε μια καθημερινότητα βασισμένη στη λειτουργικότητα και την υγιή αυτοεκτίμηση.
                     </div>
                     <div class="about-credentials reveal reveal-delay-4">
                         <div class="about-credential">
-                            <span class="about-credential-icon">🇬🇧</span>
+                            <span class="about-credential-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            </span>
                             <span class="about-credential-text">University of East London</span>
                         </div>
                         <div class="about-credential">
-                            <span class="about-credential-icon">🧠</span>
-                            <span class="about-credential-text">Εξειδικευση CBT</span>
+                            <span class="about-credential-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v.1a3 3 0 0 0-1.8 5.3 3 3 0 0 0 0 4.2A3 3 0 0 0 7 19.4v.1a2.5 2.5 0 0 0 5 0v-2.2"/><path d="M14.5 2A2.5 2.5 0 0 1 17 4.5v.1a3 3 0 0 1 1.8 5.3 3 3 0 0 1 0 4.2 3 3 0 0 1-1.8 5.3v.1a2.5 2.5 0 0 1-5 0v-2.2"/></svg>
+                            </span>
+                            <span class="about-credential-text">Εξειδίκευση CBT</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-extra-img reveal" style="margin-left: auto; margin-right: auto;">
-                <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0870.jpg?raw=true" alt="Αννα Βουλτσιου στο γραφειο">
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="section services" id="services">
         <div class="container">
             <div class="services-header">
-                <div class="section-label reveal">Εξειδικευμενες Υπηρεσιες</div>
+                <div class="section-label reveal">Εξειδικευμένες Υπηρεσίες</div>
                 <h2 class="section-title reveal reveal-delay-1">
-                    Πως μπορω να <em>σας βοηθησω</em>
+                    Πώς μπορώ να <em>σας βοηθήσω</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Καθε θεραπευτικη διαδρομη ειναι μοναδικη. Οι υπηρεσιες μου σχεδιαζονται γυρω απο εσας, με βαση τις αρχες της Γνωσιακης Συμπεριφορικης Θεραπειας.
+                    Κάθε θεραπευτική διαδρομή είναι μοναδική. Οι υπηρεσίες μου σχεδιάζονται γύρω από εσάς, με βάση τις αρχές της Γνωσιακής Συμπεριφορικής Θεραπείας.
                 </p>
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card reveal">
                     <div class="service-card-number">01</div>
-                    <h3 class="service-card-title">Διαχειριση Αγχους, Φοβιων &amp; Κρισεων Πανικου</h3>
-                    <p class="service-card-includes">Γνωσιακη - Συμπεριφοριστικη Ψυχοθεραπεια · Συμβουλευτικη αγχους &amp; στρες · Κρισεις πανικου · Αντιμετωπιση φοβιων</p>
+                    <h3 class="service-card-title">Διαχείριση Άγχους, Φοβιών &amp; Κρίσεων Πανικού</h3>
+                    <p class="service-card-includes">Γνωσιακή - Συμπεριφοριστική Ψυχοθεραπεία · Συμβουλευτική άγχους &amp; στρες · Κρίσεις πανικού · Αντιμετώπιση φοβιών</p>
                     <p class="service-card-desc">
-                        Το αγχος και ο πανικος δεν χρειαζεται να ελεγχουν τη ζωη σας. Η CBT ειναι η πλεον ενδεδειγμενη μεθοδος για τις αγχωδεις διαταραχες. Μαζι θα εντοπισουμε τις «παγιδες σκεψης» που πυροδοτουν τον φοβο. Μεσω πρακτικων ασκησεων και τεχνικων χαλαρωσης, θα μαθετε να αποδυναμωνετε τις κρισεις πανικου, αποκτωντας ξανα τον ελεγχο.
+                        Το άγχος και ο πανικός δεν χρειάζεται να ελέγχουν τη ζωή σας. Η CBT είναι η πλέον ενδεδειγμένη μέθοδος για τις αγχώδεις διαταραχές. Μαζί θα εντοπίσουμε τις «παγίδες σκέψης» που πυροδοτούν τον φόβο. Μέσω πρακτικών ασκήσεων και τεχνικών χαλάρωσης, θα μάθετε να αποδυναμώνετε τις κρίσεις πανικού, αποκτώντας ξανά τον έλεγχο.
                     </p>
                     <div class="service-card-tags">
                         <span class="service-tag">CBT</span>
-                        <span class="service-tag">Συνεδρια 50'</span>
-                        <span class="service-tag">Αγχος</span>
-                        <span class="service-tag">Πανικος</span>
+                        <span class="service-tag">Συνεδρία 50'</span>
+                        <span class="service-tag">Άγχος</span>
+                        <span class="service-tag">Πανικός</span>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card reveal reveal-delay-1">
                     <div class="service-card-number">02</div>
-                    <h3 class="service-card-title">Διαχειριση Θλιψης &amp; Ενισχυση Αυτοεκτιμησης</h3>
-                    <p class="service-card-includes">Ατομικες συνεδριες ενηλικων · Αντιμετωπιση θλιψης · Βελτιωση αυτοεικονας</p>
+                    <h3 class="service-card-title">Διαχείριση Θλίψης &amp; Ενίσχυση Αυτοεκτίμησης</h3>
+                    <p class="service-card-includes">Ατομικές συνεδρίες ενηλίκων · Αντιμετώπιση θλίψης · Βελτίωση αυτοεικόνας</p>
                     <p class="service-card-desc">
-                        Η παρατεταμενη θλιψη και η χαμηλη αυτοπεποιθηση συχνα πηγαζουν απο τον σκληρο «εσωτερικο κριτη». Δουλευουμε συνεργατικα για να αντικαταστησουμε τα μοτιβα αυτουποτιμησης με ρεαλιστικες, θετικες πεποιθησεις — με στοχο την ανακουφιση και την επανασυνδεση με τα δυνατα σας σημεια.
+                        Η παρατεταμένη θλίψη και η χαμηλή αυτοπεποίθηση συχνά πηγάζουν από τον σκληρό «εσωτερικό κριτή». Δουλεύουμε συνεργατικά για να αντικαταστήσουμε τα μοτίβα αυτοϋποτίμησης με ρεαλιστικές, θετικές πεποιθήσεις — με στόχο την ανακούφιση και την επανασύνδεση με τα δυνατά σας σημεία.
                     </p>
                     <div class="service-card-tags">
-                        <span class="service-tag">Συνεδρια 50'</span>
-                        <span class="service-tag">Αυτοεκτιμηση</span>
-                        <span class="service-tag">Θλιψη</span>
+                        <span class="service-tag">Συνεδρία 50'</span>
+                        <span class="service-tag">Αυτοεκτίμηση</span>
+                        <span class="service-tag">Θλίψη</span>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-card-number">03</div>
-                    <h3 class="service-card-title">Συμβουλευτικη Γονεων</h3>
-                    <p class="service-card-includes">Δομημενη καθοδηγηση · Υγιη ορια · Αποτελεσματικη επικοινωνια</p>
+                    <h3 class="service-card-title">Συμβουλευτική Γονέων</h3>
+                    <p class="service-card-includes">Δομημένη καθοδήγηση · Υγιή όρια · Αποτελεσματική επικοινωνία</p>
                     <p class="service-card-desc">
-                        Ο γονεικος ρολος ειναι γεματος προκλησεις. Αξιοποιωντας την εκπαιδευση της μεσα απο σεμιναρια Συμβουλευτικης Γονεων και την εμπειρια της με παιδια (ΚΕΕΠΕΑ «Οριζοντες»), σας υποστηριζει στο να θετετε υγιη ορια, να επικοινωνειτε αποτελεσματικα και να διαχειριζεστε εντασεις με ψυχραιμια και ενσυναισθηση.
+                        Ο γονεϊκός ρόλος είναι γεμάτος προκλήσεις. Αξιοποιώντας την εκπαίδευσή της μέσα από σεμινάρια Συμβουλευτικής Γονέων και την εμπειρία της με παιδιά (ΚΕΕΠΕΑ «Ορίζοντες»), σας υποστηρίζει στο να θέτετε υγιή όρια, να επικοινωνείτε αποτελεσματικά και να διαχειρίζεστε εντάσεις με ψυχραιμία και ενσυναίσθηση.
                     </p>
                     <div class="service-card-tags">
-                        <span class="service-tag">Συνεδρια 50'</span>
-                        <span class="service-tag">Γονεις</span>
+                        <span class="service-tag">Συνεδρία 50'</span>
+                        <span class="service-tag">Γονείς</span>
                     </div>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="service-card reveal reveal-delay-3">
                     <div class="service-card-number">04</div>
-                    <h3 class="service-card-title">Διαδικτυακη Ψυχοθεραπεια (Online)</h3>
-                    <p class="service-card-includes">Συνεδρια μεσω βιντεοκλησης · Ιδια ποιοτητα · Απολυτη εχεμυθεια</p>
+                    <h3 class="service-card-title">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
+                    <p class="service-card-includes">Συνεδρία μέσω βιντεοκλήσης · Ίδια ποιότητα · Απόλυτη εχεμύθεια</p>
                     <p class="service-card-desc">
-                        Αναγνωριζοντας τους γρηγορους ρυθμους της καθημερινοτητας, προσφερω τη δυνατοτητα διαδικτυακων συνεδριων. Η CBT, λογω της δομημενης φυσης της, ειναι εξαιρετικα αποτελεσματικη και στο online περιβαλλον, εξασφαλιζοντας την ιδια ποιοτητα φροντιδας, απ' οπου κι αν βρισκεστε.
+                        Αναγνωρίζοντας τους γρήγορους ρυθμούς της καθημερινότητας, προσφέρω τη δυνατότητα διαδικτυακών συνεδριών. Η CBT, λόγω της δομημένης φύσης της, είναι εξαιρετικά αποτελεσματική και στο online περιβάλλον, εξασφαλίζοντας την ίδια ποιότητα φροντίδας, απ' όπου κι αν βρίσκεστε.
                     </p>
                     <div class="service-card-tags">
-                        <span class="service-tag">Βιντεοκληση</span>
-                        <span class="service-tag">Συνεδρια 50'</span>
+                        <span class="service-tag">Βιντεοκλήση</span>
+                        <span class="service-tag">Συνεδρία 50'</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PILLARS -->
     <section class="section pillars" id="pillars">
         <div class="container">
             <div class="pillars-header">
-                <div class="section-label reveal">Εγγυηση Ποιοτητας</div>
+                <div class="section-label reveal">Εγγύηση Ποιότητας</div>
                 <h2 class="section-title reveal reveal-delay-1">
-                    Τι διασφαλιζει την <em>ποιοτητα</em> των υπηρεσιων μου
+                    Τι διασφαλίζει την <em>ποιότητα</em> των υπηρεσιών μου
                 </h2>
             </div>
             <div class="pillars-grid">
                 <div class="pillar-card reveal">
-                    <span class="pillar-icon">🇬🇧</span>
-                    <h3 class="pillar-title">Βρετανικο Ακαδημαικο Υποβαθρο</h3>
-                    <p class="pillar-desc">Σπουδες στο University of East London — μια συγχρονη, διεθνης και επιστημονικα αυστηρη προσεγγιση στην επιστημη της Ψυχολογιας.</p>
+                    <span class="pillar-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </span>
+                    <h3 class="pillar-title">Βρετανικό Ακαδημαϊκό Υπόβαθρο</h3>
+                    <p class="pillar-desc">Σπουδές στο University of East London — μια σύγχρονη, διεθνής και επιστημονικά αυστηρή προσέγγιση στην επιστήμη της Ψυχολογίας.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-1">
-                    <span class="pillar-icon">🎯</span>
-                    <h3 class="pillar-title">Η Δυναμη της CBT</h3>
-                    <p class="pillar-desc">Πρακτικη, βραχυχρονη θεραπεια που εστιαζει στο «εδω και τωρα». Τεχνικες που θα σας ακολουθουν σε ολη σας τη ζωη.</p>
+                    <span class="pillar-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </span>
+                    <h3 class="pillar-title">Η Δύναμη της CBT</h3>
+                    <p class="pillar-desc">Πρακτική, βραχύχρονη θεραπεία που εστιάζει στο «εδώ και τώρα». Τεχνικές που θα σας ακολουθούν σε όλη σας τη ζωή.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-2">
-                    <span class="pillar-icon">🧠</span>
-                    <h3 class="pillar-title">Κλινικη Πρακτικη «Νεστωρ»</h3>
-                    <p class="pillar-desc">120 ωρες εποπτευομενης κλινικης πρακτικης στο Κεντρο Μνημης «Νεστωρ», εφαρμοζοντας CBT σε πραγματικα περιστατικα.</p>
+                    <span class="pillar-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v.1a3 3 0 0 0-1.8 5.3 3 3 0 0 0 0 4.2A3 3 0 0 0 7 19.4v.1a2.5 2.5 0 0 0 5 0v-2.2"/><path d="M14.5 2A2.5 2.5 0 0 1 17 4.5v.1a3 3 0 0 1 1.8 5.3 3 3 0 0 1 0 4.2 3 3 0 0 1-1.8 5.3v.1a2.5 2.5 0 0 1-5 0v-2.2"/></svg>
+                    </span>
+                    <h3 class="pillar-title">Κλινική Πρακτική «Νέστωρ»</h3>
+                    <p class="pillar-desc">120 ώρες εποπτευόμενης κλινικής πρακτικής στο Κέντρο Μνήμης «Νέστωρ», εφαρμόζοντας CBT σε πραγματικά περιστατικά.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-3">
-                    <span class="pillar-icon">🤝</span>
-                    <h3 class="pillar-title">Πολυπλευρη Ενσυναισθηση</h3>
-                    <p class="pillar-desc">Η επαφη με παιδια με ειδικες αναγκες (ΚΕΕΠΕΑ «Οριζοντες») εχει σφυρηλατησει βαθια αποδοχη και σεβασμο στη διαφορετικοτητα.</p>
+                    <span class="pillar-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </span>
+                    <h3 class="pillar-title">Πολύπλευρη Ενσυναίσθηση</h3>
+                    <p class="pillar-desc">Η επαφή με παιδιά με ειδικές ανάγκες (ΚΕΕΠΕΑ «Ορίζοντες») έχει σφυρηλατήσει βαθιά αποδοχή και σεβασμό στη διαφορετικότητα.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JOURNEY -->
     <section class="section journey" id="journey">
         <div class="container">
             <div class="journey-header">
-                <div class="section-label reveal">Η Προσεγγιση</div>
+                <div class="section-label reveal">Η Προσέγγιση</div>
                 <h2 class="section-title reveal reveal-delay-1">
-                    Η πορεια <em>μαζι μας</em>
+                    Η πορεία <em>μαζί μας</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Μια δομημενη αλλα ευελικτη διαδρομη, σχεδιασμενη γυρω απο τις δικες σας αναγκες.
+                    Μια δομημένη αλλά ευέλικτη διαδρομή, σχεδιασμένη γύρω από τις δικές σας ανάγκες.
                 </p>
             </div>
             <div class="journey-steps">
                 <div class="journey-step reveal">
                     <div class="journey-step-number">1</div>
-                    <h3 class="journey-step-title">Επικοινωνια</h3>
-                    <p class="journey-step-desc">Η πρωτη σας κινηση φροντιδας. Κλεινουμε τη μερα και ωρα που σας εξυπηρετει.</p>
+                    <h3 class="journey-step-title">Επικοινωνία</h3>
+                    <p class="journey-step-desc">Η πρώτη σας κίνηση φροντίδας. Κλείνουμε τη μέρα και ώρα που σας εξυπηρετεί.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-1">
                     <div class="journey-step-number">2</div>
-                    <h3 class="journey-step-title">Αξιολογηση</h3>
-                    <p class="journey-step-desc">Γνωριμια σε ασφαλες περιβαλλον. Ακουμε τις αναγκες σας χωρις καμια κριτικη.</p>
+                    <h3 class="journey-step-title">Αξιολόγηση</h3>
+                    <p class="journey-step-desc">Γνωριμία σε ασφαλές περιβάλλον. Ακούμε τις ανάγκες σας χωρίς καμία κριτική.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-2">
                     <div class="journey-step-number">3</div>
-                    <h3 class="journey-step-title">Θεραπευτικο Πλανο</h3>
-                    <p class="journey-step-desc">Σχεδιαζουμε την προσεγγιση CBT που ταιριαζει αποκλειστικα στη δικη σας ιδιοσυγκρασια.</p>
+                    <h3 class="journey-step-title">Θεραπευτικό Πλάνο</h3>
+                    <p class="journey-step-desc">Σχεδιάζουμε την προσέγγιση CBT που ταιριάζει αποκλειστικά στη δική σας ιδιοσυγκρασία.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-3">
                     <div class="journey-step-number">4</div>
-                    <h3 class="journey-step-title">Αλλαγη &amp; Αναπτυξη</h3>
-                    <p class="journey-step-desc">Σταθερα βηματα προς την αυτογνωσια, τη λειτουργικοτητα και τον ελεγχο της καθημερινοτητας.</p>
+                    <h3 class="journey-step-title">Αλλαγή &amp; Ανάπτυξη</h3>
+                    <p class="journey-step-desc">Σταθερά βήματα προς την αυτογνωσία, τη λειτουργικότητα και τον έλεγχο της καθημερινότητας.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SPACE -->
     <section class="section space" id="space">
         <div class="container">
             <div class="space-header">
-                <div class="section-label reveal">Ο Χωρος</div>
+                <div class="section-label reveal">Ο Χώρος</div>
                 <h2 class="section-title reveal reveal-delay-1">
-                    Ενα περιβαλλον σχεδιασμενο για <em>ηρεμια</em>
+                    Ένα περιβάλλον σχεδιασμένο για <em>ηρεμία</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Ζεστασια, ιδιωτικοτητα και αισθηση ασφαλειας — αυτα ηταν τα κριτηρια σχεδιασμου του χωρου μας. Περιηγηθειτε στις εικονες.
+                    Ζεστασιά, ιδιωτικότητα και αίσθηση ασφάλειας — αυτά ήταν τα κριτήρια σχεδιασμού του χώρου μας. Περιηγηθείτε στις εικόνες.
                 </p>
             </div>
             <div class="space-gallery">
                 <div class="space-gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0809.jpg?raw=true" alt="Χωρος 1" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0809.jpg" alt="Χώρος 1" loading="lazy">
                     <div class="zoom-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage-deep)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     </div>
                 </div>
                 <div class="space-gallery-item reveal reveal-delay-1" onclick="openLightbox(this)">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0816.jpg?raw=true" alt="Χωρος 2" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0816.jpg" alt="Χώρος 2" loading="lazy">
                     <div class="zoom-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage-deep)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     </div>
                 </div>
                 <div class="space-gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/DSC_0823.jpg?raw=true" alt="Χωρος 3" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0823.jpg" alt="Χώρος 3" loading="lazy">
                     <div class="zoom-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage-deep)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     </div>
                 </div>
                 <div class="space-gallery-item reveal reveal-delay-1" onclick="openLightbox(this)">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/IMG-8177.jpg?raw=true" alt="Χωρος 4" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/IMG-8177.jpg" alt="Χώρος 4" loading="lazy">
                     <div class="zoom-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage-deep)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     </div>
                 </div>
                 <div class="space-gallery-item reveal reveal-delay-2" onclick="openLightbox(this)">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/IMG-8178.jpg?raw=true" alt="Χωρος 5" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/IMG-8178.jpg" alt="Χώρος 5" loading="lazy">
                     <div class="zoom-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage-deep)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     </div>
@@ -1802,36 +1779,30 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
         <img src="" alt="Gallery image" id="lightboxImg">
     </div>
 
-    <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
         <div class="container">
             <div class="reviews-header">
-                <div class="section-label reveal">Εμπειριες Θεραπευομενων</div>
-                <h2 class="section-title reveal reveal-delay-1">
-                    Η εμπιστοσυνη σας ειναι η μεγαλυτερη <em>αποδειξη</em>
-                </h2>
+                <div class="section-label reveal">Εμπειρίες Θεραπευομένων</div>
             </div>
         </div>
 
         <div class="reviews-carousel-wrapper">
             <div class="reviews-track" id="reviewsTrack">
-                <!-- Set 1 -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Δοκιμασα αρκετους ψυχοθεραπευτες χωρις αποτελεσμα, αλλα με την Αννα καταφεραμε μεσα σε σχετικα μικρο χρονικο διαστημα να στρεψουμε τη ποιοτητα ζωης μου σε πολυ καλο δρομο. Προτεινω ανεπιφυλακτα!»</p>
+                    <p class="review-text">«Δοκίμασα αρκετούς ψυχοθεραπευτές χωρίς αποτέλεσμα, αλλά με την Άννα καταφέραμε μέσα σε σχετικά μικρό χρονικό διάστημα να στρέψουμε τη ποιότητα ζωής μου σε πολύ καλό δρόμο. Προτείνω ανεπιφύλακτα!»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Alexandros</div>
-                            <div class="review-author-meta">18 Σεπτεμβριου 2025 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">18 Σεπτεμβρίου 2025 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1845,7 +1816,7 @@
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Holly Louise</div>
-                            <div class="review-author-meta">28 Ιουλιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">28 Ιουλίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1855,11 +1826,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Αψογη επαγγελματιας, ενιωσα απο τη πρωτη στιγμη οικεια και ανετα. Μεσα απο το διαλογο και με παραδειγματα μου δινει να καταλαβω την αιτια της καθε σκεψης μου.»</p>
+                    <p class="review-text">«Άψογη επαγγελματίας, ένιωσα από τη πρώτη στιγμή οικεία και άνετα. Μέσα από το διάλογο και με παραδείγματα μου δίνει να καταλάβω την αιτία της κάθε σκέψης μου.»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Vasiliki</div>
-                            <div class="review-author-meta">22 Ιουνιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">22 Ιουνίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1869,11 +1840,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Με επαγγελματικη, αλλα συναμα φιλικη προσεγγιση, εμπνεει εμπιστοσυνη απο την πρωτη στιγμη. Αποτελεσε σημαντικο στηριγμα σε δυσκολες συγκυριες που προεκυψαν στην πορεια.»</p>
+                    <p class="review-text">«Με επαγγελματική, αλλά συνάμα φιλική προσέγγιση, εμπνέει εμπιστοσύνη από την πρώτη στιγμή. Αποτέλεσε σημαντικό στήριγμα σε δύσκολες συγκυρίες που προέκυψαν στην πορεία.»</p>
                     <div class="review-author">
                         <div>
-                            <div class="review-author-name">Ελενα</div>
-                            <div class="review-author-meta">22 Ιουνιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-name">Έλενα</div>
+                            <div class="review-author-meta">22 Ιουνίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1883,11 +1854,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Ωραιος χωρος. Η κυρια Βουλτσιου ηταν πολυ φιλικη και προσιτη. Μου ενεπνευσε εμπιστοσυνη.»</p>
+                    <p class="review-text">«Ωραίος χώρος. Η κυρία Βούλτσιου ήταν πολύ φιλική και προσιτή. Μου ενέπνευσε εμπιστοσύνη.»</p>
                     <div class="review-author">
                         <div>
-                            <div class="review-author-name">Σοφοκλης</div>
-                            <div class="review-author-meta">15 Ιουνιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-name">Σοφοκλής</div>
+                            <div class="review-author-meta">15 Ιουνίου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1897,11 +1868,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Μια εξαιρετικη νεα επαγγελματιας! Με ορεξη και γεματη γνωσεις. Μου εβγαλε εμπιστοσυνη απο την αρχη και με εκανε να νιωσω ανετα!! Σιγουρα θα συνεχισω για καιρο!!»</p>
+                    <p class="review-text">«Μια εξαιρετική νέα επαγγελματίας! Με όρεξη και γεμάτη γνώσεις. Μου έβγαλε εμπιστοσύνη από την αρχή και με έκανε να νιώσω άνετα!! Σίγουρα θα συνεχίσω για καιρό!!»</p>
                     <div class="review-author">
                         <div>
-                            <div class="review-author-name">Λευτερης</div>
-                            <div class="review-author-meta">17 Μαιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-name">Λευτέρης</div>
+                            <div class="review-author-meta">17 Μαΐου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1911,11 +1882,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Πολυ ευχαριστημενη. Ασχολειται με το προβλημα σε βαθος. Μου ενεπνευσε εμπιστοσυνη.»</p>
+                    <p class="review-text">«Πολύ ευχαριστημένη. Ασχολείται με το πρόβλημα σε βάθος. Μου ενέπνευσε εμπιστοσύνη.»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Chris</div>
-                            <div class="review-author-meta">16 Μαιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">16 Μαΐου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1925,11 +1896,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Εξαιρετικη! Πραγματικα εντυπωσιακο ποσο πολυ να σε βοηθησει ο σωστος ανθρωπος/επαγγελματιας. Φαινεται οτι εχει σημαντικη εμπειρια και γνωριζει πολυ καλα το αντικειμενο της.»</p>
+                    <p class="review-text">«Εξαιρετική! Πραγματικά εντυπωσιακό πόσο πολύ να σε βοηθήσει ο σωστός άνθρωπος/επαγγελματίας. Φαίνεται ότι έχει σημαντική εμπειρία και γνωρίζει πολύ καλά το αντικείμενό της.»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Spyros</div>
-                            <div class="review-author-meta">12 Μαιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">12 Μαΐου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1939,27 +1910,26 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Ως πρωτη επαφη με την ψυχοθεραπεια, η ψυχολογος με βοηθησε πολυ να ανοιχτω και να βγαλω αυτα που ηθελα απο μεσα μου χωρις να νιωσω καμια πιεση. Σιγουρα θα συνεχισω μαζι της!»</p>
+                    <p class="review-text">«Ως πρώτη επαφή με την ψυχοθεραπεία, η ψυχολόγος με βοήθησε πολύ να ανοιχτώ και να βγάλω αυτά που ήθελα από μέσα μου χωρίς να νιώσω καμία πίεση. Σίγουρα θα συνεχίσω μαζί της!»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">ΚΑΤΕΡΙΝΑ</div>
-                            <div class="review-author-meta">11 Μαιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">11 Μαΐου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
                 </div>
 
-                <!-- Duplicate set for infinite scroll -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Δοκιμασα αρκετους ψυχοθεραπευτες χωρις αποτελεσμα, αλλα με την Αννα καταφεραμε μεσα σε σχετικα μικρο χρονικο διαστημα να στρεψουμε τη ποιοτητα ζωης μου σε πολυ καλο δρομο. Προτεινω ανεπιφυλακτα!»</p>
+                    <p class="review-text">«Δοκίμασα αρκετούς ψυχοθεραπευτές χωρίς αποτέλεσμα, αλλά με την Άννα καταφέραμε μέσα σε σχετικά μικρό χρονικό διάστημα να στρέψουμε τη ποιότητα ζωής μου σε πολύ καλό δρόμο. Προτείνω ανεπιφύλακτα!»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Alexandros</div>
-                            <div class="review-author-meta">18 Σεπτεμβριου 2025 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">18 Σεπτεμβρίου 2025 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1973,7 +1943,7 @@
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Holly Louise</div>
-                            <div class="review-author-meta">28 Ιουλιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">28 Ιουλίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1983,11 +1953,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Αψογη επαγγελματιας, ενιωσα απο τη πρωτη στιγμη οικεια και ανετα. Μεσα απο το διαλογο και με παραδειγματα μου δινει να καταλαβω την αιτια της καθε σκεψης μου.»</p>
+                    <p class="review-text">«Άψογη επαγγελματίας, ένιωσα από τη πρώτη στιγμή οικεία και άνετα. Μέσα από το διάλογο και με παραδείγματα μου δίνει να καταλάβω την αιτία της κάθε σκέψης μου.»</p>
                     <div class="review-author">
                         <div>
                             <div class="review-author-name">Vasiliki</div>
-                            <div class="review-author-meta">22 Ιουνιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-meta">22 Ιουνίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -1997,11 +1967,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Με επαγγελματικη, αλλα συναμα φιλικη προσεγγιση, εμπνεει εμπιστοσυνη απο την πρωτη στιγμη. Αποτελεσε σημαντικο στηριγμα σε δυσκολες συγκυριες που προεκυψαν στην πορεια.»</p>
+                    <p class="review-text">«Με επαγγελματική, αλλά συνάμα φιλική προσέγγιση, εμπνέει εμπιστοσύνη από την πρώτη στιγμή. Αποτέλεσε σημαντικό στήριγμα σε δύσκολες συγκυρίες που προέκυψαν στην πορεία.»</p>
                     <div class="review-author">
                         <div>
-                            <div class="review-author-name">Ελενα</div>
-                            <div class="review-author-meta">22 Ιουνιου 2023 · 1 αξιολογηση</div>
+                            <div class="review-author-name">Έλενα</div>
+                            <div class="review-author-meta">22 Ιουνίου 2023 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -2011,11 +1981,11 @@
                         <span class="review-score">10.0 <span>/ 10</span></span>
                         <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
                     </div>
-                    <p class="review-text">«Ωραιος χωρος. Η κυρια Βουλτσιου ηταν πολυ φιλικη και προσιτη. Μου ενεπνευσε εμπιστοσυνη.»</p>
+                    <p class="review-text">«Ωραίος χώρος. Η κυρία Βούλτσιου ήταν πολύ φιλική και προσιτή. Μου ενέπνευσε εμπιστοσύνη.»</p>
                     <div class="review-author">
                         <div>
-                            <div class="review-author-name">Σοφοκλης</div>
-                            <div class="review-author-meta">15 Ιουνιου 2022 · 1 αξιολογηση</div>
+                            <div class="review-author-name">Σοφοκλής</div>
+                            <div class="review-author-meta">15 Ιουνίου 2022 · 1 αξιολόγηση</div>
                         </div>
                         <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="review-doctoranytime">
                     </div>
@@ -2026,21 +1996,20 @@
         <div class="container">
             <div class="reviews-more reveal">
                 <a href="https://www.doctoranytime.gr/d/Psychologos/anna-voultsiou" target="_blank" rel="noopener">
-                    Διαβαστε περισσοτερα στο
+                    Διαβάστε περισσότερα στο
                     <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime">
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta-section" id="contact">
         <div class="container">
             <h2 class="cta-title reveal">
-                Η αλλαγη ξεκιναει με ενα <em>βημα</em>
+                Η αλλαγή ξεκινάει με ένα <em>βήμα</em>
             </h2>
             <p class="cta-desc reveal reveal-delay-1">
-                Επικοινωνηστε μαζι μου για να ορισουμε την πρωτη σας συνεδρια. Ενα περιβαλλον αποδοχης και κατανοησης σας περιμενει.
+                Επικοινωνήστε μαζί μου για να ορίσουμε την πρώτη σας συνεδρία. Ένα περιβάλλον αποδοχής και κατανόησης σας περιμένει.
             </p>
             <a href="tel:6981912668" class="cta-btn reveal reveal-delay-2">
                 ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
@@ -2049,42 +2018,37 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-brand-logo">
-                    <img src="https://github.com/agelmet/VOULTSIOU/blob/main/front.jpg?raw=true" alt="Logo">
-                    <span>Αννα Βουλτσιου</span>
+                    <span>Άννα Βούλτσιου</span>
                 </div>
                 <p class="footer-brand-text">
-                    Αδειουχος Ψυχολογος (ΑΠ 13535). Γνωσιακη Συμπεριφορικη Θεραπεια στη Νεα Ιωνια. Πρακτικα βηματα για ουσιαστικη αλλαγη.
+                    Αδειούχος Ψυχολόγος (ΑΠ 13535). Γνωσιακή Συμπεριφορική Θεραπεία στη Νέα Ιωνία. Πρακτικά βήματα για ουσιαστική αλλαγή.
                 </p>
                 <div class="footer-socials">
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/psychologist_annavoultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                     </a>
-                    <!-- Facebook -->
                     <a href="https://www.facebook.com/annoula.voultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
-                    <!-- Doctoranytime -->
                     <a href="https://www.doctoranytime.gr/d/Psychologos/anna-voultsiou" target="_blank" rel="noopener" class="footer-social" aria-label="Doctoranytime" style="font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.5);">
                         DA
                     </a>
                 </div>
                 <a href="https://www.doctoranytime.gr/d/Psychologos/anna-voultsiou" target="_blank" rel="noopener" class="footer-doctoranytime">
                     <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime">
-                    <span>Προφιλ στο Doctoranytime</span>
+                    <span>Προφίλ στο Doctoranytime</span>
                 </a>
             </div>
 
             <div class="footer-col">
-                <div class="footer-col-title">Στοιχεια Επικοινωνιας</div>
+                <div class="footer-col-title">Στοιχεία Επικοινωνίας</div>
                 <div class="footer-contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Σευλευκειας 2 - 4, Νεα Ιωνια, Αττικη</span>
+                    <span>Σελευκείας 2 - 4, Νέα Ιωνία, Αττική</span>
                 </div>
                 <div class="footer-contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -2097,27 +2061,26 @@
             </div>
 
             <div class="footer-col">
-                <div class="footer-col-title">Ωραριο Λειτουργιας</div>
+                <div class="footer-col-title">Ωράριο Λειτουργίας</div>
                 <div class="footer-hours-row">
                     <span class="footer-hours-day">ΔΕΥΤΕΡΑ - ΣΑΒΒΑΤΟ</span>
-                    <span class="footer-hours-time">Κατοπιν ραντεβου</span>
+                    <span class="footer-hours-time">Κατόπιν ραντεβού</span>
                 </div>
                 <div class="footer-hours-row" style="border: none; padding-top: 12px;">
                     <span class="footer-hours-day">ΚΥΡΙΑΚΗ</span>
-                    <span class="footer-hours-time">Κλειστα</span>
+                    <span class="footer-hours-time">Κλειστά</span>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <span class="footer-bottom-text">&copy; 2026 Αννα Βουλτσιου — Ψυχολογος. Ολα τα δικαιωματα διατηρουνται.</span>
+            <span class="footer-bottom-text">&copy; 2026 Άννα Βούλτσιου — Ψυχολόγος. Όλα τα δικαιώματα διατηρούνται.</span>
             <span class="footer-bottom-credit">
                 Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a>
             </span>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
         // Page Loader
         window.addEventListener('load', () => {
