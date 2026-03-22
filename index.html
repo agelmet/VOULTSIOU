@@ -1429,7 +1429,18 @@
             .hero-actions { justify-content: center; }
             .hero-portrait-frame { max-width: 340px; margin: 0 auto; }
             .hero-portrait-accent { left: -10px; }
-            .about-grid { grid-template-columns: 1fr; gap: 50px; }
+            
+            /* Reorder About section for mobile ONLY */
+            .about-grid { display: flex; flex-direction: column; gap: 0; }
+            .about-content { display: contents; }
+            .about-content > .section-label { order: 1; }
+            .about-content > .section-title { order: 2; }
+            .about-content > p:nth-of-type(1) { order: 3; }
+            .about-content > p:nth-of-type(2) { order: 4; }
+            .about-image-wrapper { order: 5; margin: 20px 0 30px 0; width: 100%; }
+            .about-content > .about-quote { order: 6; }
+            .about-content > .about-credentials { order: 7; }
+
             .services-grid { grid-template-columns: 1fr; }
             .pillars-grid { grid-template-columns: repeat(2, 1fr); }
             .journey-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
@@ -1475,11 +1486,11 @@
             <span class="nav-logo-text">Άννα Βούλτσιου</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#about">Η Ψυχολογος</a></li>
-            <li><a href="#services">Υπηρεσιες</a></li>
-            <li><a href="#pillars">Εγγυηση</a></li>
-            <li><a href="#space">Ο Χωρος</a></li>
-            <li><a href="#reviews">Εμπειριες</a></li>
+            <li><a href="#about">Η Ψυχολόγος</a></li>
+            <li><a href="#services">Υπηρεσίες</a></li>
+            <li><a href="#pillars">Εγγύηση</a></li>
+            <li><a href="#space">Ο Χώρος</a></li>
+            <li><a href="#reviews">Εμπειρίες</a></li>
             <li><a href="#contact" class="nav-cta">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a></li>
         </ul>
         <div class="nav-hamburger" id="navHamburger" onclick="toggleMobile()">
@@ -1741,7 +1752,7 @@
                     Ένα περιβάλλον σχεδιασμένο για <em>ηρεμία</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Ζεστασιά, ιδιωτικότητα και αίσθηση ασφάλειας — αυτά ήταν τα κριτήρια σχεδιασμού του χώρου μας. Περιηγηθείτε στις εικόνες.
+                    Ζεστασιά, ιδιωτικότητα και αίσθηση ασφάλειας — αυτά ήταν τα κριτήρια σχεδιασμού του χώρου μας. Περιηγηθειτε στις εικόνες.
                 </p>
             </div>
             <div class="space-gallery">
