@@ -9,28 +9,29 @@
     <style>
         /* ===== CSS VARIABLES ===== */
         :root {
-            --sage-deep: #2C3E2D;
-            --sage-mid: #4A6B4E;
-            --sage-soft: #7A9E7E;
-            --sage-light: #B8CEB9;
-            --sage-whisper: #E8F0E8;
-            --cream: #FAF8F5;
-            --cream-warm: #F5F0EB;
-            --stone: #D4CBC2;
-            --stone-light: #E8E2DC;
-            --charcoal: #2A2A2A;
-            --charcoal-soft: #4A4A4A;
-            --text-body: #3D3D3D;
-            --text-muted: #7A7A7A;
+            /* Updated to Soft Pastel Beige & Pink Palette */
+            --sage-deep: #8b7976; /* Soft Mauve-Taupe replacing dark green */
+            --sage-mid: #a89592; /* Muted pastel brown-pink */
+            --sage-soft: #d8cbc9; /* Soft pastel pink/beige */
+            --sage-light: #eee5e4; /* Lighter pastel beige */
+            --sage-whisper: #fbf7f6; /* Very soft warm whisper */
+            --cream: #FAF7F5;
+            --cream-warm: #F6F0EC;
+            --stone: #d6ccc8;
+            --stone-light: #e8e2df;
+            --charcoal: #4a3e3c; /* Softer brown-grey instead of harsh black */
+            --charcoal-soft: #6b5c59;
+            --text-body: #5e504e;
+            --text-muted: #8c7e7b;
             --white: #FFFFFF;
             --accent-rose: #C4A882;
             --accent-rose-light: #E8D5BE;
-            --overlay-dark: rgba(42, 62, 45, 0.85);
+            --overlay-dark: rgba(139, 121, 118, 0.88);
             --overlay-light: rgba(255, 255, 255, 0.92);
-            --shadow-soft: 0 4px 30px rgba(44, 62, 45, 0.08);
-            --shadow-medium: 0 8px 40px rgba(44, 62, 45, 0.12);
-            --shadow-heavy: 0 20px 60px rgba(44, 62, 45, 0.18);
-            --shadow-glow: 0 0 60px rgba(122, 158, 126, 0.15);
+            --shadow-soft: 0 4px 30px rgba(139, 121, 118, 0.08);
+            --shadow-medium: 0 8px 40px rgba(139, 121, 118, 0.12);
+            --shadow-heavy: 0 20px 60px rgba(139, 121, 118, 0.18);
+            --shadow-glow: 0 0 60px rgba(216, 203, 201, 0.4);
             --font-display: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Outfit', sans-serif;
             --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
@@ -134,7 +135,7 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             padding: 10px 40px;
-            box-shadow: 0 1px 30px rgba(44, 62, 45, 0.06);
+            box-shadow: 0 1px 30px rgba(139, 121, 118, 0.06);
         }
         .nav-logo {
             display: flex;
@@ -326,10 +327,10 @@
             inset: 0;
             z-index: 2;
             background: linear-gradient(135deg, 
-                rgba(44, 62, 45, 0.92) 0%, 
-                rgba(44, 62, 45, 0.75) 40%,
-                rgba(44, 62, 45, 0.6) 70%,
-                rgba(44, 62, 45, 0.4) 100%);
+                var(--overlay-dark) 0%, 
+                rgba(139, 121, 118, 0.75) 40%,
+                rgba(139, 121, 118, 0.6) 70%,
+                rgba(139, 121, 118, 0.4) 100%);
         }
         .hero-grain {
             position: absolute;
@@ -351,7 +352,7 @@
             position: absolute;
             width: 2px;
             height: 2px;
-            background: rgba(184, 206, 185, 0.3);
+            background: rgba(216, 203, 201, 0.3);
             border-radius: 50%;
             animation: particleFloat linear infinite;
         }
@@ -534,7 +535,7 @@
             right: -20px;
             bottom: -20px;
             border-radius: 220px 220px 60px 60px;
-            border: 1px solid rgba(184, 206, 185, 0.15);
+            border: 1px solid rgba(238, 222, 220, 0.15);
             z-index: 1;
             animation: glowPulse 4s ease-in-out infinite;
         }
@@ -1022,7 +1023,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(44,62,45,0.3) 0%, transparent 50%);
+            background: linear-gradient(to top, rgba(74, 62, 60, 0.3) 0%, transparent 50%);
             opacity: 0;
             transition: opacity 0.4s ease;
             pointer-events: none;
@@ -1229,7 +1230,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(122,158,126,0.15) 0%, transparent 70%);
+            background: radial-gradient(circle at 50% 50%, rgba(216, 203, 201, 0.15) 0%, transparent 70%);
             pointer-events: none;
         }
         .cta-title {
@@ -1244,7 +1245,7 @@
         .cta-desc {
             font-size: 1rem;
             line-height: 1.8;
-            color: rgba(255,255,255,0.55);
+            color: rgba(255,255,255,0.7);
             font-weight: 300;
             max-width: 600px;
             margin: 0 auto 40px;
@@ -1274,7 +1275,7 @@
 
         /* ===== FOOTER ===== */
         .footer {
-            background: #1e2d1f;
+            background: #4a3e3c;
             padding: 80px 60px 40px;
             color: rgba(255,255,255,0.6);
         }
@@ -1302,7 +1303,7 @@
             font-size: 0.88rem;
             line-height: 1.8;
             font-weight: 300;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.5);
             max-width: 350px;
         }
         .footer-socials {
@@ -1319,7 +1320,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.7);
             transition: all 0.3s ease;
         }
         .footer-social:hover {
@@ -1335,7 +1336,7 @@
             font-weight: 600;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.4);
             margin-bottom: 24px;
         }
         .footer-contact-item {
@@ -1354,7 +1355,7 @@
         .footer-contact-item a,
         .footer-contact-item span {
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.55);
+            color: rgba(255,255,255,0.65);
             text-decoration: none;
             line-height: 1.6;
             transition: color 0.3s ease;
@@ -1373,7 +1374,7 @@
         }
         .footer-hours-time {
             font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.8);
             font-weight: 500;
         }
         .footer-doctoranytime {
@@ -1391,8 +1392,8 @@
             border-color: rgba(255,255,255,0.2);
             background: rgba(255,255,255,0.03);
         }
-        .footer-doctoranytime img { height: 16px; filter: brightness(0) invert(1); opacity: 0.5; }
-        .footer-doctoranytime span { font-size: 0.75rem; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
+        .footer-doctoranytime img { height: 16px; filter: brightness(0) invert(1); opacity: 0.6; }
+        .footer-doctoranytime span { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
 
         .footer-bottom {
             max-width: 1300px;
@@ -1405,15 +1406,15 @@
         }
         .footer-bottom-text {
             font-size: 0.78rem;
-            color: rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.35);
         }
         .footer-bottom-credit a {
             font-size: 0.75rem;
-            color: rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.35);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .footer-bottom-credit a:hover { color: rgba(255,255,255,0.5); }
+        .footer-bottom-credit a:hover { color: rgba(255,255,255,0.6); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -1475,11 +1476,13 @@
 </head>
 <body>
 
+    <!-- PAGE LOADER -->
     <div class="page-loader" id="pageLoader">
         <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="" class="loader-logo">
         <div class="loader-line"></div>
     </div>
 
+    <!-- NAVIGATION -->
     <nav class="nav" id="mainNav">
         <a href="#hero" class="nav-logo">
             <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="Logo" class="nav-logo-img">
@@ -1498,6 +1501,7 @@
         </div>
     </nav>
 
+    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#about" onclick="closeMobile()">Η Ψυχολόγος</a>
         <a href="#services" onclick="closeMobile()">Υπηρεσίες</a>
@@ -1507,6 +1511,7 @@
         <a href="#contact" onclick="closeMobile()">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
     </div>
 
+    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-bg">
             <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0823.jpg" alt="Χώρος θεραπείας">
@@ -1519,14 +1524,14 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <div class="hero-badge-dot"></div>
-                    <span>Γνωσιακή Συμπεριφορική Θεραπεία</span>
+                    <span>Cognitive Behavioural Therapy (CBT)</span>
                 </div>
                 <h1 class="hero-title">
-                    Πρακτικά βήματα<br>για <em>ουσιαστική αλλαγή.</em>
+                    Η αλλαγή ξεκινάει μέσα από την<br><em>κατανόηση του εαυτού.</em>
                 </h1>
                 <p class="hero-subtitle">Cognitive Behavioural Therapy (CBT)</p>
                 <p class="hero-desc">
-                    Ένας ασφαλής χώρος στη Νέα Ιωνία, όπου η επιστημονικά τεκμηριωμένη θεραπεία συναντά τη γνήσια ανθρώπινη κατανόηση. Μάθετε να αναγνωρίζετε τις σκέψεις που σας περιορίζουν και να χτίζετε μια καθημερινότητα με νόημα.
+                    Ένας ασφαλής και υποστηρικτικός χώρος στη Νέα Ιωνία, όπου η επιστημονικά τεκμηριωμένη ψυχοθεραπεία συναντά τη γνήσια ανθρώπινη σύνδεση. Μέσα από σύγχρονες γνωσιακές και συμπεριφορικές προσεγγίσεις, θα μάθετε να κατανοείτε τα μοτίβα σκέψης και συμπεριφοράς που σας δυσκολεύουν, να διαχειρίζεστε πιο αποτελεσματικά τα συναισθήματά σας και να καλλιεργείτε μια καθημερινότητα με περισσότερη ψυχολογική ευελιξία, αυτοσυμπόνια και προσωπικό νόημα.
                 </p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn-primary">
@@ -1540,7 +1545,8 @@
             <div class="hero-portrait">
                 <div class="hero-portrait-frame">
                     <div class="hero-portrait-glow"></div>
-                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0864.jpg" alt="Άννα Βούλτσιου" class="hero-portrait-img">
+                    <!-- SWAPPED IMAGE URL HERE -->
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0859.jpg" alt="Άννα Βούλτσιου" class="hero-portrait-img">
                     <div class="hero-portrait-accent">
                         <div class="hero-portrait-accent-label">Αρ. Άδειας</div>
                         <div class="hero-portrait-accent-value">ΑΠ 13535</div>
@@ -1556,12 +1562,14 @@
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="section about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-wrapper reveal">
                     <div class="about-image-decoration"></div>
-                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0859.jpg" alt="Άννα Βούλτσιου" class="about-image">
+                    <!-- SWAPPED IMAGE URL HERE -->
+                    <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0864.jpg" alt="Άννα Βούλτσιου" class="about-image">
                 </div>
                 <div class="about-content">
                     <div class="section-label reveal">Η Ψυχολόγος</div>
@@ -1569,13 +1577,16 @@
                         Άννα <em>Βούλτσιου</em>
                     </h2>
                     <p class="about-text reveal reveal-delay-2">
-                        Η Άννα Βούλτσιου είναι αδειούχος Ψυχολόγος (Αρ. Άδειας: ΑΠ 13535) και διατηρεί το ιδιωτικό της γραφείο στη Νέα Ιωνία. Είναι κάτοχος πτυχίου Ψυχολογίας (BSc Psychology) από το βρετανικό University of East London. Προκειμένου να προσφέρει άμεσες και επιστημονικά τεκμηριωμένες λύσεις, εξειδικεύτηκε στη Γνωσιακή – Συμπεριφορική Ψυχοθεραπεία (C.B.T.) στο Κέντρο Εφαρμοσμένης Ψυχοθεραπείας και Συμβουλευτικής.
+                        Η Άννα Βούλτσιου είναι αδειούχος Ψυχολόγος (Αρ. Άδειας: ΑΠ 13535) και διατηρεί ιδιωτικό γραφείο στη Νέα Ιωνία. Είναι απόφοιτη Ψυχολογίας (BSc Psychology) του University of East London και έχει εκπαιδευτεί στη Γνωσιακή – Συμπεριφορική Ψυχοθεραπεία (CBT) στο Κέντρο Εφαρμοσμένης Ψυχοθεραπείας και Συμβουλευτικής.
                     </p>
                     <p class="about-text reveal reveal-delay-2">
-                        Η κλινική της εμπειρία είναι ευρεία και διακρίνεται για την ενσυναίσθηση και την προσαρμοστικότητά της. Έχει εργαστεί πρακτικά στο Κέντρο Ειδικής Εκπαίδευσης Παιδιών με Ειδικές Ανάγκες (Κ.Ε.Ε.Π.Ε.Α.) «Ορίζοντες», αποκτώντας πολύτιμη εμπειρία στη διαχείριση ευαίσθητων πληθυσμών. Παράλληλα, ολοκλήρωσε 120 ώρες εποπτευόμενης κλινικής άσκησης στο «Νέστωρ - Κέντρο Μνήμης», εφαρμόζοντας τις τεχνικές της CBT σε πραγματικές, απαιτητικές κλινικές συνθήκες.
+                        Παράλληλα, έχει μετεκπαιδευτεί στις προσεγγίσεις του Τρίτου Κύματος της CBT, με έμφαση στη Θεραπεία Αποδοχής και Δέσμευσης (ACT) και στη Θεραπεία Εστιασμένη στη Συμπόνια (CFT), ενσωματώνοντας στη θεραπευτική της δουλειά στοιχεία ψυχολογικής ευελιξίας, αποδοχής, ενσυνειδητότητας και ανάπτυξης ενός πιο υποστηρικτικού και συμπονετικού εσωτερικού διαλόγου. Επιπλέον, διαθέτει εκπαίδευση στη Συμβουλευτική Γονέων, υποστηρίζοντας γονείς στην κατανόηση των συναισθηματικών αναγκών των παιδιών και στη δημιουργία πιο λειτουργικών τρόπων επικοινωνίας μέσα στην οικογένεια.
                     </p>
+                    <div class="about-text reveal reveal-delay-2" style="margin-bottom: 20px;">
+                        Η κλινική της εμπειρία περιλαμβάνει πρακτική άσκηση και εποπτευόμενη κλινική εργασία σε δομές ψυχικής υγείας και ειδικής εκπαίδευσης, όπως το Κ.Ε.Ε.Π.Ε.Α. «Ορίζοντες» και το «Νέστωρ – Κέντρο Μνήμης», όπου εργάστηκε με ευαίσθητους πληθυσμούς και εφάρμοσε θεραπευτικές παρεμβάσεις σε πραγματικές κλινικές συνθήκες.
+                    </div>
                     <div class="about-quote reveal reveal-delay-3">
-                        Στόχος μου είναι να σας εφοδιάσω με τα κατάλληλα πρακτικά εργαλεία ώστε να αναγνωρίζετε τις αρνητικές σκέψεις, να διαχειρίζεστε το άγχος, και να χτίσετε μια καθημερινότητα βασισμένη στη λειτουργικότητα και την υγιή αυτοεκτίμηση.
+                        Βασικός της στόχος είναι να προσφέρει ένα ασφαλές και συνεργατικό θεραπευτικό πλαίσιο, μέσα στο οποίο το άτομο μπορεί να κατανοήσει βαθύτερα τον εαυτό του, να αναγνωρίσει τα μοτίβα που το περιορίζουν και να αναπτύξει πιο λειτουργικούς τρόπους διαχείρισης σκέψεων, συναισθημάτων και σχέσεων. Μέσα από πρακτικά εργαλεία και μια θεραπευτική σχέση βασισμένη στην αποδοχή και την ενσυναίσθηση, υποστηρίζει τους θεραπευόμενους να κινηθούν προς μια ζωή περισσότερο συνδεδεμένη με τις προσωπικές τους αξίες και ανάγκες.
                     </div>
                     <div class="about-credentials reveal reveal-delay-4">
                         <div class="about-credential">
@@ -1596,25 +1607,27 @@
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section class="section services" id="services">
         <div class="container">
             <div class="services-header">
                 <div class="section-label reveal">Εξειδικευμένες Υπηρεσίες</div>
                 <h2 class="section-title reveal reveal-delay-1">
-                    Πώς μπορώ να <em>σας βοηθήσω</em>
+                    Πώς μπορώ να σας <em>βοηθήσω</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Κάθε θεραπευτική διαδρομή είναι μοναδική. Οι υπηρεσίες μου σχεδιάζονται γύρω από εσάς, με βάση τις αρχές της Γνωσιακής Συμπεριφορικής Θεραπείας.
+                    Κάθε θεραπευτική διαδρομή είναι μοναδική. Οι υπηρεσίες μου προσαρμόζονται στις προσωπικές σας ανάγκες, συνδυάζοντας τη Γνωσιακή – Συμπεριφορική Θεραπεία με σύγχρονες προσεγγίσεις που ενισχύουν την ψυχολογική ευελιξία, την αυτοκατανόηση και τη συναισθηματική ανθεκτικότητα.
                 </p>
             </div>
 
             <div class="services-grid">
+                <!-- Service 1 -->
                 <div class="service-card reveal">
                     <div class="service-card-number">01</div>
                     <h3 class="service-card-title">Διαχείριση Άγχους, Φοβιών &amp; Κρίσεων Πανικού</h3>
-                    <p class="service-card-includes">Γνωσιακή - Συμπεριφοριστική Ψυχοθεραπεία · Συμβουλευτική άγχους &amp; στρες · Κρίσεις πανικού · Αντιμετώπιση φοβιών</p>
+                    <p class="service-card-includes">Γνωσιακή – Συμπεριφορική Ψυχοθεραπεία · Διαχείριση άγχους &amp; στρες · Κρίσεις πανικού · Φοβίες</p>
                     <p class="service-card-desc">
-                        Το άγχος και ο πανικός δεν χρειάζεται να ελέγχουν τη ζωή σας. Η CBT είναι η πλέον ενδεδειγμένη μέθοδος για τις αγχώδεις διαταραχές. Μαζί θα εντοπίσουμε τις «παγίδες σκέψης» που πυροδοτούν τον φόβο. Μέσω πρακτικών ασκήσεων και τεχνικών χαλάρωσης, θα μάθετε να αποδυναμώνετε τις κρίσεις πανικού, αποκτώντας ξανά τον έλεγχο.
+                        Το άγχος, οι φοβίες και οι κρίσεις πανικού μπορούν να επηρεάσουν ουσιαστικά την καθημερινότητα και την αίσθηση ελέγχου. Μέσα από τη CBT και σύγχρονες θεραπευτικές τεχνικές, θα μάθετε να αναγνωρίζετε τους μηχανισμούς σκέψης που εντείνουν τον φόβο και την υπερένταση, να σχετίζεστε διαφορετικά με τις δύσκολες σκέψεις και να διαχειρίζεστε πιο αποτελεσματικά τα συναισθήματά σας. Στόχος δεν είναι η «εξάλειψη» κάθε δυσάρεστου συναισθήματος, αλλά η ανάπτυξη μεγαλύτερης ψυχολογικής ευελιξίας, ώστε το άγχος να μην καθορίζει τις επιλογές και τη ζωή σας.
                     </p>
                     <div class="service-card-tags">
                         <span class="service-tag">CBT</span>
@@ -1624,12 +1637,13 @@
                     </div>
                 </div>
 
+                <!-- Service 2 -->
                 <div class="service-card reveal reveal-delay-1">
                     <div class="service-card-number">02</div>
                     <h3 class="service-card-title">Διαχείριση Θλίψης &amp; Ενίσχυση Αυτοεκτίμησης</h3>
-                    <p class="service-card-includes">Ατομικές συνεδρίες ενηλίκων · Αντιμετώπιση θλίψης · Βελτίωση αυτοεικόνας</p>
+                    <p class="service-card-includes">Ατομικές συνεδρίες ενηλίκων · Αυτοεκτίμηση · Αυτοεικόνα · Συναισθηματική ενδυνάμωση</p>
                     <p class="service-card-desc">
-                        Η παρατεταμένη θλίψη και η χαμηλή αυτοπεποίθηση συχνά πηγάζουν από τον σκληρό «εσωτερικό κριτή». Δουλεύουμε συνεργατικά για να αντικαταστήσουμε τα μοτίβα αυτοϋποτίμησης με ρεαλιστικές, θετικές πεποιθήσεις — με στόχο την ανακούφιση και την επανασύνδεση με τα δυνατά σας σημεία.
+                        Η παρατεταμένη θλίψη, η αυτοαμφισβήτηση και η αυστηρή εσωτερική κριτική συχνά δημιουργούν έναν φαύλο κύκλο απογοήτευσης και απόσυρσης. Μέσα από τη θεραπευτική διαδικασία, δουλεύουμε πάνω στην κατανόηση αυτών των μοτίβων, ενισχύοντας έναν πιο ρεαλιστικό, υποστηρικτικό και συμπονετικό τρόπο σύνδεσης με τον εαυτό. Αξιοποιώντας στοιχεία από τη Θεραπεία Εστιασμένη στη Συμπόνια (CFT) και τις προσεγγίσεις του Τρίτου Κύματος της CBT, στόχος είναι η ενίσχυση της αυτοεκτίμησης, η συναισθηματική ανακούφιση και η επανασύνδεση με όσα έχουν πραγματική αξία για εσάς.
                     </p>
                     <div class="service-card-tags">
                         <span class="service-tag">Συνεδρία 50'</span>
@@ -1638,12 +1652,13 @@
                     </div>
                 </div>
 
+                <!-- Service 3 -->
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-card-number">03</div>
                     <h3 class="service-card-title">Συμβουλευτική Γονέων</h3>
-                    <p class="service-card-includes">Δομημένη καθοδήγηση · Υγιή όρια · Αποτελεσματική επικοινωνία</p>
+                    <p class="service-card-includes">Καθοδήγηση γονέων · Υγιή όρια · Σύνδεση &amp; επικοινωνία · Διαχείριση εντάσεων</p>
                     <p class="service-card-desc">
-                        Ο γονεϊκός ρόλος είναι γεμάτος προκλήσεις. Αξιοποιώντας την εκπαίδευσή της μέσα από σεμινάρια Συμβουλευτικής Γονέων και την εμπειρία της με παιδιά (ΚΕΕΠΕΑ «Ορίζοντες»), σας υποστηρίζει στο να θέτετε υγιή όρια, να επικοινωνείτε αποτελεσματικά και να διαχειρίζεστε εντάσεις με ψυχραιμία και ενσυναίσθηση.
+                        Ο γονεϊκός ρόλος συνοδεύεται από απαιτήσεις, αμφιβολίες και συναισθηματική πίεση. Μέσα από τη Συμβουλευτική Γονέων, παρέχεται υποστήριξη στην κατανόηση των αναγκών του παιδιού, στη διαχείριση δύσκολων συμπεριφορών και στην ανάπτυξη πιο λειτουργικών τρόπων επικοινωνίας μέσα στην οικογένεια. Η προσέγγιση βασίζεται στη σύνδεση, την ενσυναίσθηση και τη σταθερότητα των ορίων, αξιοποιώντας την εκπαίδευση στη Συμβουλευτική Γονέων, καθώς και την εμπειρία από κλινική εργασία και πρακτική άσκηση σε δομές ειδικής εκπαίδευσης και ψυχικής υγείας.
                     </p>
                     <div class="service-card-tags">
                         <span class="service-tag">Συνεδρία 50'</span>
@@ -1651,12 +1666,13 @@
                     </div>
                 </div>
 
+                <!-- Service 4 -->
                 <div class="service-card reveal reveal-delay-3">
                     <div class="service-card-number">04</div>
                     <h3 class="service-card-title">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
-                    <p class="service-card-includes">Συνεδρία μέσω βιντεοκλήσης · Ίδια ποιότητα · Απόλυτη εχεμύθεια</p>
+                    <p class="service-card-includes">Συνεδρίες μέσω βιντεοκλήσης · Ασφάλεια &amp; εχεμύθεια · Ίδια θεραπευτική ποιότητα</p>
                     <p class="service-card-desc">
-                        Αναγνωρίζοντας τους γρήγορους ρυθμούς της καθημερινότητας, προσφέρω τη δυνατότητα διαδικτυακών συνεδριών. Η CBT, λόγω της δομημένης φύσης της, είναι εξαιρετικά αποτελεσματική και στο online περιβάλλον, εξασφαλίζοντας την ίδια ποιότητα φροντίδας, απ' όπου κι αν βρίσκεστε.
+                        Οι διαδικτυακές συνεδρίες προσφέρουν τη δυνατότητα θεραπευτικής υποστήριξης με ευελιξία και άνεση, ανεξάρτητα από την τοποθεσία ή το απαιτητικό πρόγραμμα της καθημερινότητας. Η Γνωσιακή – Συμπεριφορική Θεραπεία, λόγω της δομημένης αλλά ευέλικτης φύσης της, εφαρμόζεται αποτελεσματικά και στο online περιβάλλον, διατηρώντας την ίδια ποιότητα θεραπευτικής σχέσης, συνεργασίας και επιστημονικής φροντίδας.
                     </p>
                     <div class="service-card-tags">
                         <span class="service-tag">Βιντεοκλήση</span>
@@ -1667,6 +1683,7 @@
         </div>
     </section>
 
+    <!-- PILLARS -->
     <section class="section pillars" id="pillars">
         <div class="container">
             <div class="pillars-header">
@@ -1680,34 +1697,35 @@
                     <span class="pillar-icon">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                     </span>
-                    <h3 class="pillar-title">Βρετανικό Ακαδημαϊκό Υπόβαθρο</h3>
-                    <p class="pillar-desc">Σπουδές στο University of East London — μια σύγχρονη, διεθνής και επιστημονικά αυστηρή προσέγγιση στην επιστήμη της Ψυχολογίας.</p>
+                    <h3 class="pillar-title">Σύγχρονο Επιστημονικό Υπόβαθρο</h3>
+                    <p class="pillar-desc">Σπουδές Ψυχολογίας στο University of East London και συνεχής μετεκπαίδευση στη Γνωσιακή – Συμπεριφορική Θεραπεία και στις σύγχρονες προσεγγίσεις του Τρίτου Κύματος, όπως η ACT και η CFT.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-1">
                     <span class="pillar-icon">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                     </span>
-                    <h3 class="pillar-title">Η Δύναμη της CBT</h3>
-                    <p class="pillar-desc">Πρακτική, βραχύχρονη θεραπεία που εστιάζει στο «εδώ και τώρα». Τεχνικές που θα σας ακολουθούν σε όλη σας τη ζωή.</p>
+                    <h3 class="pillar-title">Επιστημονικά Τεκμηριωμένη Θεραπεία</h3>
+                    <p class="pillar-desc">Η CBT αποτελεί μία από τις πιο αποτελεσματικές και ερευνητικά τεκμηριωμένες μορφές ψυχοθεραπείας, προσφέροντας πρακτικά εργαλεία που μπορούν να αξιοποιηθούν ουσιαστικά στην καθημερινή ζωή.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-2">
                     <span class="pillar-icon">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v.1a3 3 0 0 0-1.8 5.3 3 3 0 0 0 0 4.2A3 3 0 0 0 7 19.4v.1a2.5 2.5 0 0 0 5 0v-2.2"/><path d="M14.5 2A2.5 2.5 0 0 1 17 4.5v.1a3 3 0 0 1 1.8 5.3 3 3 0 0 1 0 4.2 3 3 0 0 1-1.8 5.3v.1a2.5 2.5 0 0 1-5 0v-2.2"/></svg>
                     </span>
-                    <h3 class="pillar-title">Κλινική Πρακτική «Νέστωρ»</h3>
-                    <p class="pillar-desc">120 ώρες εποπτευόμενης κλινικής πρακτικής στο Κέντρο Μνήμης «Νέστωρ», εφαρμόζοντας CBT σε πραγματικά περιστατικά.</p>
+                    <h3 class="pillar-title">Κλινική Εκπαίδευση &amp; Πρακτική Εμπειρία</h3>
+                    <p class="pillar-desc">Κλινική άσκηση και εποπτευόμενη πρακτική σε δομές ψυχικής υγείας και ειδικής εκπαίδευσης, με εμπειρία στην υποστήριξη ατόμων διαφορετικών ηλικιών και αναγκών.</p>
                 </div>
                 <div class="pillar-card reveal reveal-delay-3">
                     <span class="pillar-icon">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                     </span>
-                    <h3 class="pillar-title">Πολύπλευρη Ενσυναίσθηση</h3>
-                    <p class="pillar-desc">Η επαφή με παιδιά με ειδικές ανάγκες (ΚΕΕΠΕΑ «Ορίζοντες») έχει σφυρηλατήσει βαθιά αποδοχή και σεβασμό στη διαφορετικότητα.</p>
+                    <h3 class="pillar-title">Θεραπευτική Σχέση με Ενσυναίσθηση</h3>
+                    <p class="pillar-desc">Η θεραπευτική διαδικασία βασίζεται στην αποδοχή, τον σεβασμό και τη δημιουργία ενός ασφαλούς χώρου, όπου κάθε άνθρωπος μπορεί να εκφραστεί χωρίς φόβο κριτικής.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- JOURNEY -->
     <section class="section journey" id="journey">
         <div class="container">
             <div class="journey-header">
@@ -1716,34 +1734,35 @@
                     Η πορεία <em>μαζί μας</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Μια δομημένη αλλά ευέλικτη διαδρομή, σχεδιασμένη γύρω από τις δικές σας ανάγκες.
+                    Μια θεραπευτική διαδικασία δομημένη γύρω από τις δικές σας ανάγκες, με στόχο τη βαθύτερη κατανόηση του εαυτού και τη δημιουργία ουσιαστικής αλλαγής.
                 </p>
             </div>
             <div class="journey-steps">
                 <div class="journey-step reveal">
                     <div class="journey-step-number">1</div>
                     <h3 class="journey-step-title">Επικοινωνία</h3>
-                    <p class="journey-step-desc">Η πρώτη σας κίνηση φροντίδας. Κλείνουμε τη μέρα και ώρα που σας εξυπηρετεί.</p>
+                    <p class="journey-step-desc">Η πρώτη κίνηση φροντίδας προς τον εαυτό σας. Ορίζουμε μαζί τη μέρα και ώρα που σας εξυπηρετεί.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-1">
                     <div class="journey-step-number">2</div>
                     <h3 class="journey-step-title">Αξιολόγηση</h3>
-                    <p class="journey-step-desc">Γνωριμία σε ασφαλές περιβάλλον. Ακούμε τις ανάγκες σας χωρίς καμία κριτική.</p>
+                    <p class="journey-step-desc">Δημιουργούμε έναν ασφαλή χώρο γνωριμίας, όπου διερευνούμε τις δυσκολίες, τις ανάγκες και τους προσωπικούς σας στόχους χωρίς κριτική.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-2">
                     <div class="journey-step-number">3</div>
                     <h3 class="journey-step-title">Θεραπευτικό Πλάνο</h3>
-                    <p class="journey-step-desc">Σχεδιάζουμε την προσέγγιση CBT που ταιριάζει αποκλειστικά στη δική σας ιδιοσυγκρασία.</p>
+                    <p class="journey-step-desc">Σχεδιάζουμε από κοινού μια θεραπευτική πορεία προσαρμοσμένη στη δική σας προσωπικότητα, αξιοποιώντας τεχνικές CBT και σύγχρονες θεραπευτικές προσεγγίσεις.</p>
                 </div>
                 <div class="journey-step reveal reveal-delay-3">
                     <div class="journey-step-number">4</div>
                     <h3 class="journey-step-title">Αλλαγή &amp; Ανάπτυξη</h3>
-                    <p class="journey-step-desc">Σταθερά βήματα προς την αυτογνωσία, τη λειτουργικότητα και τον έλεγχο της καθημερινότητας.</p>
+                    <p class="journey-step-desc">Με σταθερά και ρεαλιστικά βήματα, ενισχύουμε την αυτογνωσία, τη συναισθηματική ανθεκτικότητα και τη δυνατότητα να ζείτε πιο συνδεδεμένοι με τις αξίες και τις ανάγκες σας για μια πιο λειτουργική καθημερινότητα.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SPACE -->
     <section class="section space" id="space">
         <div class="container">
             <div class="space-header">
@@ -1752,7 +1771,7 @@
                     Ένα περιβάλλον σχεδιασμένο για <em>ηρεμία</em>
                 </h2>
                 <p class="section-desc reveal reveal-delay-2">
-                    Ζεστασιά, ιδιωτικότητα και αίσθηση ασφάλειας — αυτά ήταν τα κριτήρια σχεδιασμού του χώρου μας. Περιηγηθειτε στις εικόνες.
+                    Ζεστασιά, ιδιωτικότητα και αίσθηση ασφάλειας — αυτά ήταν τα κριτήρια σχεδιασμού του χώρου μας. Περιηγηθείτε στις εικόνες.
                 </p>
             </div>
             <div class="space-gallery">
@@ -1790,11 +1809,13 @@
         </div>
     </section>
 
+    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
         <img src="" alt="Gallery image" id="lightboxImg">
     </div>
 
+    <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
         <div class="container">
             <div class="reviews-header">
@@ -1804,6 +1825,7 @@
 
         <div class="reviews-carousel-wrapper">
             <div class="reviews-track" id="reviewsTrack">
+                <!-- Set 1 -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
@@ -1931,6 +1953,7 @@
                     </div>
                 </div>
 
+                <!-- Duplicate set for infinite scroll -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
@@ -2014,6 +2037,7 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section" id="contact">
         <div class="container">
             <h2 class="cta-title reveal">
@@ -2029,6 +2053,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -2039,12 +2064,15 @@
                     Αδειούχος Ψυχολόγος (ΑΠ 13535). Γνωσιακή Συμπεριφορική Θεραπεία στη Νέα Ιωνία. Πρακτικά βήματα για ουσιαστική αλλαγή.
                 </p>
                 <div class="footer-socials">
+                    <!-- Instagram -->
                     <a href="https://www.instagram.com/psychologist_annavoultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                     </a>
+                    <!-- Facebook -->
                     <a href="https://www.facebook.com/annoula.voultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
+                    <!-- Doctoranytime -->
                     <a href="https://www.doctoranytime.gr/d/Psychologos/anna-voultsiou" target="_blank" rel="noopener" class="footer-social" aria-label="Doctoranytime" style="font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.5);">
                         DA
                     </a>
@@ -2092,6 +2120,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script>
         // Page Loader
         window.addEventListener('load', () => {
