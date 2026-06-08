@@ -1438,9 +1438,10 @@
             .about-content > .section-title { order: 2; }
             .about-content > p:nth-of-type(1) { order: 3; }
             .about-content > p:nth-of-type(2) { order: 4; }
-            .about-image-wrapper { order: 5; margin: 20px 0 30px 0; width: 100%; }
-            .about-content > .about-quote { order: 6; }
-            .about-content > .about-credentials { order: 7; }
+            .about-content > p:nth-of-type(3) { order: 5; margin-bottom: 20px; }
+            .about-image-wrapper { order: 6; margin: 20px 0 30px 0; width: 100%; }
+            .about-content > .about-quote { order: 7; }
+            .about-content > .about-credentials { order: 8; }
 
             .services-grid { grid-template-columns: 1fr; }
             .pillars-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1476,13 +1477,11 @@
 </head>
 <body>
 
-    <!-- PAGE LOADER -->
     <div class="page-loader" id="pageLoader">
         <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="" class="loader-logo">
         <div class="loader-line"></div>
     </div>
 
-    <!-- NAVIGATION -->
     <nav class="nav" id="mainNav">
         <a href="#hero" class="nav-logo">
             <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/front.jpg" alt="Logo" class="nav-logo-img">
@@ -1501,7 +1500,6 @@
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#about" onclick="closeMobile()">Η Ψυχολόγος</a>
         <a href="#services" onclick="closeMobile()">Υπηρεσίες</a>
@@ -1511,7 +1509,6 @@
         <a href="#contact" onclick="closeMobile()">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
     </div>
 
-    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-bg">
             <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0823.jpg" alt="Χώρος θεραπείας">
@@ -1545,7 +1542,6 @@
             <div class="hero-portrait">
                 <div class="hero-portrait-frame">
                     <div class="hero-portrait-glow"></div>
-                    <!-- SWAPPED IMAGE URL HERE -->
                     <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0859.jpg" alt="Άννα Βούλτσιου" class="hero-portrait-img">
                     <div class="hero-portrait-accent">
                         <div class="hero-portrait-accent-label">Αρ. Άδειας</div>
@@ -1562,13 +1558,11 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-wrapper reveal">
                     <div class="about-image-decoration"></div>
-                    <!-- SWAPPED IMAGE URL HERE -->
                     <img src="https://raw.githubusercontent.com/agelmet/VOULTSIOU/main/DSC_0864.jpg" alt="Άννα Βούλτσιου" class="about-image">
                 </div>
                 <div class="about-content">
@@ -1582,9 +1576,9 @@
                     <p class="about-text reveal reveal-delay-2">
                         Παράλληλα, έχει μετεκπαιδευτεί στις προσεγγίσεις του Τρίτου Κύματος της CBT, με έμφαση στη Θεραπεία Αποδοχής και Δέσμευσης (ACT) και στη Θεραπεία Εστιασμένη στη Συμπόνια (CFT), ενσωματώνοντας στη θεραπευτική της δουλειά στοιχεία ψυχολογικής ευελιξίας, αποδοχής, ενσυνειδητότητας και ανάπτυξης ενός πιο υποστηρικτικού και συμπονετικού εσωτερικού διαλόγου. Επιπλέον, διαθέτει εκπαίδευση στη Συμβουλευτική Γονέων, υποστηρίζοντας γονείς στην κατανόηση των συναισθηματικών αναγκών των παιδιών και στη δημιουργία πιο λειτουργικών τρόπων επικοινωνίας μέσα στην οικογένεια.
                     </p>
-                    <div class="about-text reveal reveal-delay-2" style="margin-bottom: 20px;">
+                    <p class="about-text reveal reveal-delay-2">
                         Η κλινική της εμπειρία περιλαμβάνει πρακτική άσκηση και εποπτευόμενη κλινική εργασία σε δομές ψυχικής υγείας και ειδικής εκπαίδευσης, όπως το Κ.Ε.Ε.Π.Ε.Α. «Ορίζοντες» και το «Νέστωρ – Κέντρο Μνήμης», όπου εργάστηκε με ευαίσθητους πληθυσμούς και εφάρμοσε θεραπευτικές παρεμβάσεις σε πραγματικές κλινικές συνθήκες.
-                    </div>
+                    </p>
                     <div class="about-quote reveal reveal-delay-3">
                         Βασικός της στόχος είναι να προσφέρει ένα ασφαλές και συνεργατικό θεραπευτικό πλαίσιο, μέσα στο οποίο το άτομο μπορεί να κατανοήσει βαθύτερα τον εαυτό του, να αναγνωρίσει τα μοτίβα που το περιορίζουν και να αναπτύξει πιο λειτουργικούς τρόπους διαχείρισης σκέψεων, συναισθημάτων και σχέσεων. Μέσα από πρακτικά εργαλεία και μια θεραπευτική σχέση βασισμένη στην αποδοχή και την ενσυναίσθηση, υποστηρίζει τους θεραπευόμενους να κινηθούν προς μια ζωή περισσότερο συνδεδεμένη με τις προσωπικές τους αξίες και ανάγκες.
                     </div>
@@ -1607,7 +1601,6 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="section services" id="services">
         <div class="container">
             <div class="services-header">
@@ -1621,7 +1614,6 @@
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card reveal">
                     <div class="service-card-number">01</div>
                     <h3 class="service-card-title">Διαχείριση Άγχους, Φοβιών &amp; Κρίσεων Πανικού</h3>
@@ -1637,7 +1629,6 @@
                     </div>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card reveal reveal-delay-1">
                     <div class="service-card-number">02</div>
                     <h3 class="service-card-title">Διαχείριση Θλίψης &amp; Ενίσχυση Αυτοεκτίμησης</h3>
@@ -1652,7 +1643,6 @@
                     </div>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-card-number">03</div>
                     <h3 class="service-card-title">Συμβουλευτική Γονέων</h3>
@@ -1666,7 +1656,6 @@
                     </div>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="service-card reveal reveal-delay-3">
                     <div class="service-card-number">04</div>
                     <h3 class="service-card-title">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
@@ -1683,7 +1672,6 @@
         </div>
     </section>
 
-    <!-- PILLARS -->
     <section class="section pillars" id="pillars">
         <div class="container">
             <div class="pillars-header">
@@ -1725,7 +1713,6 @@
         </div>
     </section>
 
-    <!-- JOURNEY -->
     <section class="section journey" id="journey">
         <div class="container">
             <div class="journey-header">
@@ -1762,7 +1749,6 @@
         </div>
     </section>
 
-    <!-- SPACE -->
     <section class="section space" id="space">
         <div class="container">
             <div class="space-header">
@@ -1809,13 +1795,11 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
         <img src="" alt="Gallery image" id="lightboxImg">
     </div>
 
-    <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
         <div class="container">
             <div class="reviews-header">
@@ -1825,7 +1809,6 @@
 
         <div class="reviews-carousel-wrapper">
             <div class="reviews-track" id="reviewsTrack">
-                <!-- Set 1 -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
@@ -1953,7 +1936,6 @@
                     </div>
                 </div>
 
-                <!-- Duplicate set for infinite scroll -->
                 <div class="review-card">
                     <div class="review-rating">
                         <span class="review-score">10.0 <span>/ 10</span></span>
@@ -2037,7 +2019,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta-section" id="contact">
         <div class="container">
             <h2 class="cta-title reveal">
@@ -2053,7 +2034,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -2064,15 +2044,12 @@
                     Αδειούχος Ψυχολόγος (ΑΠ 13535). Γνωσιακή Συμπεριφορική Θεραπεία στη Νέα Ιωνία. Πρακτικά βήματα για ουσιαστική αλλαγή.
                 </p>
                 <div class="footer-socials">
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/psychologist_annavoultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                     </a>
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/annoula.voultsiou/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1LVjYoBjNm/?mibextid=wwXIfr" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
-                    <!-- Doctoranytime -->
                     <a href="https://www.doctoranytime.gr/d/Psychologos/anna-voultsiou" target="_blank" rel="noopener" class="footer-social" aria-label="Doctoranytime" style="font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.5);">
                         DA
                     </a>
@@ -2087,7 +2064,7 @@
                 <div class="footer-col-title">Στοιχεία Επικοινωνίας</div>
                 <div class="footer-contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Σελευκείας 2 - 4, Νέα Ιωνία, Αττική</span>
+                    <span>Αγίου Γεωργίου 63 και Σελευκείας 2-4, Νέα Ιωνία, Αττική</span>
                 </div>
                 <div class="footer-contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -2120,7 +2097,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
         // Page Loader
         window.addEventListener('load', () => {
